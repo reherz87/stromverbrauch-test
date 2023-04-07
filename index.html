@@ -14,6 +14,7 @@
   <article>
     <h1>Seite mit hoher DOM Size</h1>
     <h2>Viele Elemente</h2>
+    <div id="result"></div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, fugit inventore repudiandae non consectetur dolores doloremque earum odit, ea dolorum quod eveniet vitae aliquam ad cum, exercitationem sed ullam dolore!</p>
   </article>
   <main>
@@ -4950,5 +4951,10 @@
       </section>
     </div>
   </main>
+  <script>
+    let p = document.querySelectorAll("p");
+    let result = document.querySelector("#result");
+    result.innerHTML = p.length;
+  </script>
 </body>
 </html>
