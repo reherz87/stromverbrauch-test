@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="bigdomsize.css" />
+  </head>
+  <body>
+    <header>
+      <ul class="navigation">
+        <li><a href="index.html">Große Domsize (Script)</a></li>
+        <li><a href="reduceddomsize.html">Kleine Domsize (Script)</a></li>
+        <li><a href="bigdomsize_noScript.html">Große Domsize</a></li>
+        <li><a href="reduceddomsize_noScript.html">Kleine Domsize</a></li>
+        <li><a href="bilder.html">Bilder</a></li>
+        <li><a href="bilder_optimiert.html">Bilder (optimiert)</a></li>
+        <li><a href="video.html">Video (autoplay)</a></li>
+        <li><a href="video_noAutoplay.html">Video (No autoplay)</a></li>
+        <li><a href="video_visibilityAPI.html">Video (Visibility API)</a></li>
+      </ul>
+    </header>
+    <article>
+      <h1>Seite mit Video und autoplay</h1>
+      <h2>62MB Größe</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, fugit
+        inventore repudiandae non consectetur dolores doloremque earum odit, ea
+        dolorum quod eveniet vitae aliquam ad cum, exercitationem sed ullam
+        dolore!
+      </p>
+    </article>
+    <main>
+      <video width="100%" controls>
+        <source src="./videos/1.MOV" />
+      </video>
+    </main>
+    <script>
+      const video = document.querySelector("video");
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          video.pause();
+        } else {
+          video.play();
+        }
+      });
+    </script>
+  </body>
+</html>
